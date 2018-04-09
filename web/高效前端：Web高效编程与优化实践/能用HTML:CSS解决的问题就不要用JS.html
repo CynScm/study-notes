@@ -7,24 +7,74 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
   <style>
+    .user {
+      border: 1px red solid;
+    }
+
     .menu {
+      display: none;
+      border: 1px red solid;
+    }
+
+    /* li.menu:before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -20px;
+    width: 100%;
+    height: 20px;
+    border: 1px blue solid
+} */
+
+    .user:hover+.menu {
+      display: list-item;
+    }
+
+    .menu:hover {
+      display: list-item;
+    }
+
+    input[type=checkbox] {
       display: none;
     }
 
-    .user:hover+.menu {
-      display: inline;
+    /*未选中的checkbox的样式*/
+
+    .checkbox {
+      /* 实现略 */
+      border: 1px red solid;
+      border-radius: 50%;
+      width: 10px;
+      height: 10px;
+      display: inline-block;
+    }
+
+    input[type=checkbox]:checked+.checkbox {
+      /* 实现略 */
+      border: 1px blue solid
+    }
+
+    input {
+      border: 1px black solid;
+      width: 10px;
+      height: 10px;
     }
   </style>
 </head>
 
 <body>
-  <li class="user">用户</li>
+  <!-- <li class="user">用户</li>
   <li class="menu">
     <ul>
       <li>账户设置</li>
       <li>登出</li>
     </ul>
-  </li>
+  </li> -->
+
+  <label>
+    <input type="checkbox">
+    <span class="checkbox"></span>
+  </label>
 </body>
 
 </html>
