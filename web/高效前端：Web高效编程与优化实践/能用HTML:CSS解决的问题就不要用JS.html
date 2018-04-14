@@ -94,6 +94,35 @@
         display: table-row;
       }
     }
+
+    li {
+      width: 100%;
+    }
+
+    li:first-child:nth-last-child(2),
+    li:first-child:nth-last-child(2)~li {
+      width: 50%;
+    }
+
+    li:first-child:nth-last-child(3),
+    li:first-child:nth-last-child(3)~li {
+      width: 33%;
+      /* border:1px red solid; */
+    }
+
+    span[data-title] {
+      position: relative;
+    }
+
+    span[data-title]:hover:before {
+      content: attr(data-title);
+      position: absolute;
+      top: -150%;
+      left: 50%;
+      transform: translateX(-50%);
+      white-space: nowrap;
+      background:yellow
+    }
   </style>
 </head>
 
@@ -123,6 +152,15 @@
     <div>column 3</div>
     <div>column 4</div>
   </div>
+
+  <ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+  </ul>
+  <p>hello,
+    <span data-title='Frontend Development'>FED</span>
+  </p>
 </body>
 
 </html>
