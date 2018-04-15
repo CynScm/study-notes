@@ -25,13 +25,13 @@ var removeDuplicates = function(nums) {
     }
     return size+1
 };
+let nums = [1,1,2,2,3,4,5];
+removeDuplicates(nums)
+```
 1. Time complextiy : O(n). Assume that nn is the length of array. Each of `i` and `size` traverses at most nn steps.
 
 2. Space complexity : O(1).
 
-let nums = [1,1,2,2,3,4,5];
-removeDuplicates(nums)
-```
 ### java实现方式 (核心原理同js方式)
 ```java
 public int removeDuplicates(int[] nums) {
