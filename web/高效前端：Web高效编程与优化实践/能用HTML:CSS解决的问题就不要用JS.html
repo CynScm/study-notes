@@ -121,7 +121,19 @@
       left: 50%;
       transform: translateX(-50%);
       white-space: nowrap;
-      background:yellow
+      background: yellow
+    }
+
+    .choose {
+      counter-reset: fruit;
+    }
+
+    .choose input:checked {
+      counter-increment: fruit;
+    }
+
+    .count:before {
+      content: counter(fruit);
     }
   </style>
 </head>
@@ -161,6 +173,15 @@
   <p>hello,
     <span data-title='Frontend Development'>FED</span>
   </p>
+  <div class="choose">
+    <label>
+      <input type="checkbox">苹果</label>
+    <label>
+      <input type="checkbox">香蕉</label>
+  </div>
+
+  <p>您选择了
+    <span class="count"></span>种水果</p>
 </body>
 
 </html>

@@ -28,7 +28,7 @@ var removeDuplicates = function(nums) {
 let nums = [1,1,2,2,3,4,5];
 removeDuplicates(nums)
 ```
-1. Time complextiy : O(n). Assume that nn is the length of array. Each of `i` and `size` traverses at most nn steps.
+1. Time complexity : O(n). Assume that nn is the length of array. Each of `i` and `size` traverses at most nn steps.
 
 2. Space complexity : O(1).
 
