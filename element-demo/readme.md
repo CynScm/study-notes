@@ -1,5 +1,7 @@
 # element-demo
 
+是对[elementUI](https://github.com/ElemeFE/element)项目的组件的探究
+
 > A Vue.js project
 
 ## Build Setup
